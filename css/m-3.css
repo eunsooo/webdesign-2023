@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+#header {
+    width: 100%;
+    display: flex;
+}
+#header .logo {
+    width: 20%;
+    height: 100px;
+    background-color: #efefef;
+}
+#header .nav {
+    width: 80%;
+    background-color: #e3e3e3;
+}
+#slider {
+    width: 100%;
+    height: 300px;
+    background-color: #d9d9d9;
+}
+#contents {
+    width: 100%;
+    display: flex;
+}
+#contents .content1 {
+    width: 33.3333%;
+    height: 200px;
+    background-color: #d1d1d1;
+}
+#contents .content2 {
+    width: 33.3333%;
+    height: 200px;
+    background-color: #c7c7c7;
+}
+#contents .content3 {
+    width: 33.3333%;
+    height: 200px;
+    background-color: #bcbcbc;
+}
+#footer {
+    width: 100%;
+    display: flex;
+}
+#footer .footer1 {
+    width: 20%;
+    height: 100px;
+    background-color: #b1b1b1;
+}
+#footer .footer2 {
+    width: 60%;
+    height: 100px;
+    background-color: #a3a3a3;
+}
+#footer .footer3 {
+    width: 20%;
+    height: 100px;
+    background-color: #9d9d9d;
+}
+
+/* nav */
+#header {
+    position: relative;
+}
+#header::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    top: 100px;
+    left: 0;
+    background: #9c9c9c;
+    z-index: 1;
+    transition: all 300ms;
+}
+#header.on::after {
+    height: 156px;
+}
+.nav {
+    z-index: 1000;
+}
+.nav > ul {
+    display: flex;
+    justify-content: right;
+    margin-top: 61px;
+}
+.nav > ul > li {
+    position: relative;
+}
+.nav > ul > li > a {
+    display: inline-block;
+    padding: 10px 50px;
+    background: #ccc;
+}
+.nav > ul > li > a:hover {
+    background: #b6b6b6;
+}
+.nav > ul > li > ul {
+    position: absolute;
+    top: 39px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+.nav > ul > li > ul > li {}
+.nav > ul > li > ul > li > a {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
+}
+.nav > ul > li > ul > li > a:hover {
+    background: #b5b5b5;
+}
+
+/* for javascript */
+.nav > ul > li > ul {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    transition: all 600ms;
+}
