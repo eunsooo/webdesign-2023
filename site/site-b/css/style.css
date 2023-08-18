@@ -34,10 +34,27 @@ img {
 
 /* header */
 #header {
+    position: relative;
     width: 100%;
     background-color: #e9e9e9;
 }
+#header::after {
+    content: '';
+    position: absolute;
+    top: 99px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    height: 0px;
+    background: rgba(0,0,0,0.6);
+    z-index: 1000;
+    transition: all 0.4s;
+}
+#header.on::after {
+    height: 160px;
+}
 #header .container {
+    position: relative;
     display: flex;
     align-items: end;
 }
@@ -50,6 +67,7 @@ img {
 }
 #header .container .nav {
     width: 80%;
+    z-index: 2000;
 }
 #header .container .nav > ul {
     display: flex;
@@ -67,11 +85,11 @@ img {
     background: #d7d7d7;
 }
 #header .container .nav > ul > li > ul {
-    display: none;
     position: absolute;
     top: 49px;
     left: 0;
     width: 100%;
+    opacity: 0;
 }
 #header .container .nav > ul > li > ul > li {}
 #header .container .nav > ul > li > ul > li > a {
@@ -80,9 +98,10 @@ img {
     padding: 10px;
     width: 100%;
     text-align: center;
+    color: #fff;
 }
 #header .container .nav > ul > li > ul > li > a:hover {
-    background-color: #fff2aa;
+    background-color: rgba(0,0,0,0.8);
 }
 
 /* slider */
@@ -95,7 +114,7 @@ img {
 }
 #slider .container .sliderWrap {
     display: flex;
-    width: 300%;
+    width: 400%;
 }
 #slider .container .sliderWrap .slider {
     position: relative;
