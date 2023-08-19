@@ -16,3 +16,83 @@ img {
     vertical-align: top;
     width: 100%;
 }
+
+/* wrap */
+#wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* aside */
+#aside {
+    width: 200px;
+    height: 650px;
+}
+#aside .logo {
+    width: 100%;
+    height: 100px;
+    background: #efefef;
+}
+#aside .nav {
+    height: 550px;
+    background: #e4e4e4;
+}
+
+/* main */
+#main {
+    width: calc(100% - 200px);
+    height: 650px;
+}
+
+/* main : slider */
+#slider {
+    display: flex;
+    width: 100%;
+}
+#slider .image{
+    width: calc(100% - 230px);
+    height: 400px;
+    background-color: #cbcbcb;
+}
+#slider .banner{
+    width: 230px;
+    height: 400px;
+    background-color: #bcbcbc;
+}
+
+/* main : contents */
+#contents {
+    display: flex;
+    width: 100%;
+}
+#contents .notice {
+    width: 50%;
+    height: 250px;
+    background-color: #a6a6a6;
+}
+#contents .gallery {
+    width: 50%;
+    height: 250px;
+    background-color: #929292;
+}
+
+/* footer */
+#footer {
+    display: flex;
+    width: 100%;
+}
+#footer .footer1 {
+    width: 200px;
+    height: 100px;
+    background-color: #868686;
+}
+#footer .footer2 {
+    width: calc(100% - 430px);
+    height: 100px;
+    background-color: #7f7f7f;
+}
+#footer .footer3 {
+    width: 230px;
+    height: 100px;
+    background-color: #737373;
+}
