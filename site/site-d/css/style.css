@@ -65,7 +65,9 @@ img {
     border: 2px solid #ffbc13;
 }
 #aside .nav > ul > li > ul {
-    display: none;
+    height: 0;
+    overflow: hidden;
+    transition: all 300ms;
 }
 #aside .nav > ul > li > ul > li > a{
     display: inline-block;
