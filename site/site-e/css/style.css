@@ -71,6 +71,8 @@ img {
     width: 200px;
     height: 0;
     overflow: hidden;
+    transition: all 0.3s;
+    z-index: 100;
 }
 #header .nav > ul > li > ul > li > a {
     display: inline-block;
@@ -254,10 +256,11 @@ img {
     width: calc(100% - 600px);
     height: 100%;
     background: #c5c5c5;
+    overflow: hidden;
 }
 #slider .sliderWrap {
     display: flex;
-    width: 300%;
+    width: 400%;
     height: 100%;
 }
 #slider .sliderWrap .slider {
